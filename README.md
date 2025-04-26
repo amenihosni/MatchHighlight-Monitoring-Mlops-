@@ -1,12 +1,3 @@
-# 🚀 MLOps Project with MLflow Tracking
-
-This repository implements a simple yet powerful machine learning workflow using **MLflow** for experiment tracking.  
-It includes two main scripts: `main.py` and `model-pipeline.py`, which together handle data loading, training, evaluation, and MLflow logging. 📈
-
----
-
-## 📂 Project Structure
-
 
 ---
 
@@ -19,12 +10,30 @@ It includes two main scripts: `main.py` and `model-pipeline.py`, which together 
 
 ---
 
+## 📸 Screenshots
 
-![Capture d’écran 2025-04-26 154713](https://github.com/user-attachments/assets/40f2c859-f6d9-4ca4-bb71-a673a46c0689)
-![Capture d’écran 2025-04-26 154636](https://github.com/user-attachments/assets/ed713914-a6dd-481b-b1a9-41761b4e793e)
-![Capture d’écran 2025-04-26 154501](https://github.com/user-attachments/assets/b14e2ba0-ac0b-491c-8784-3b503e5f1e2c)
-![Capture d’écran 2025-04-26 154434](https://github.com/user-attachments/assets/a09533f9-cba3-4f9f-987c-b2d6b5f7a5ce)
-![Capture d’écran 2025-04-26 154410](https://github.com/user-attachments/assets/c0404cbb-11f5-45e0-a4d3-ec7503921156)
+![Capture d’écran 2025-04-26 154410](https://github.com/user-attachments/assets/785ee3a4-bff8-448a-b2ae-fdb5f505b2ad)
+
+*🔍 MLflow Experiments Dashboard: Overview of all experiments and runs.*
+
+---
+
+![Capture d’écran 2025-04-26 154434](https://github.com/user-attachments/assets/fc62610d-0993-49d9-9945-f0429ac21d41)
+
+*📊 Detailed view of a single run including parameters, metrics, and artifacts.*
+
+---
+
+![Capture d’écran 2025-04-26 154501](https://github.com/user-attachments/assets/6855b8ce-8b52-4c31-8f0b-b60ac6ca175b)
+
+*🛠️ Parameters and evaluation metrics logged during training.*
+
+---
+![Capture d’écran 2025-04-26 154636](https://github.com/user-attachments/assets/927e784d-d1d8-4861-8297-3332affc41d0)
+
+*📈 Artifacts like models, plots, and files saved by MLflow.*
+
+---
 
 
 ## 🛠️ Setup Instructions
@@ -32,12 +41,9 @@ It includes two main scripts: `main.py` and `model-pipeline.py`, which together 
 ### 1. Create and activate a virtual environment:
 
 ```bash
-python -m venv venv!
+python -m venv venv
 # Activate it:
 # On Windows:
 venv\Scripts\activate
 # On Mac/Linux:
 source venv/bin/activate
-
-
-
