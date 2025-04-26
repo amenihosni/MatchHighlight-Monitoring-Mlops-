@@ -35,6 +35,10 @@
 
 ---
 
+![prefect](https://github.com/user-attachments/assets/29d6d9c3-4448-42ef-91a3-8cb7d5061cb8)
+
+*📊Monitoring tasks using prefect.*
+
 
 ## 🛠️ Setup Instructions
 
