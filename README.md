@@ -19,6 +19,14 @@ It includes two main scripts: `main.py` and `model-pipeline.py`, which together 
 
 ---
 
+
+![Capture d’écran 2025-04-26 154713](https://github.com/user-attachments/assets/40f2c859-f6d9-4ca4-bb71-a673a46c0689)
+![Capture d’écran 2025-04-26 154636](https://github.com/user-attachments/assets/ed713914-a6dd-481b-b1a9-41761b4e793e)
+![Capture d’écran 2025-04-26 154501](https://github.com/user-attachments/assets/b14e2ba0-ac0b-491c-8784-3b503e5f1e2c)
+![Capture d’écran 2025-04-26 154434](https://github.com/user-attachments/assets/a09533f9-cba3-4f9f-987c-b2d6b5f7a5ce)
+![Capture d’écran 2025-04-26 154410](https://github.com/user-attachments/assets/c0404cbb-11f5-45e0-a4d3-ec7503921156)
+
+
 ## 🛠️ Setup Instructions
 
 ### 1. Create and activate a virtual environment:
@@ -31,10 +39,5 @@ venv\Scripts\activate
 # On Mac/Linux:
 source venv/bin/activate
 
-[Capture d’écran 2025-04-26 154410](https://github.com/user-attachments/assets/3d3edaff-d688-4d2e-8a23-feddaf4ce7f7)
-![Capture d’écran 2025-04-26 154713](https://github.com/user-attachments/assets/77df70e8-304e-4d69-a27d-ce555a970b20)
-![Capture d’écran 2025-04-26 154636](https://github.com/user-attachments/assets/334bcbfa-b476-4db2-a4f6-0471fff9ea8b)
-![Capture d’écran 2025-04-26 154501](https://github.com/user-attachments/assets/7ec691c5-6d7c-4941-845c-8e8de00660fb)
-![Capture d’écran 2025-04-26 154434](https://github.com/user-attachments/assets/b3b2f390-9e9d-4655-b1ab-f0fc77cc88c2)
 
 
