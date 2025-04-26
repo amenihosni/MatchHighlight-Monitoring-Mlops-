@@ -16,6 +16,8 @@ import torch.nn.functional as F
 import mlflow
 import mlflow.pytorch
 from typing import Dict, List, Tuple
+from prefect import task
+from prefect.logging import get_run_logger
 
 # -------------------- YOLO Detector --------------------
 
@@ -126,9 +128,13 @@ class TacticalAnalyzer:
             
         return metrics
 
-# -------------------- Process Video --------------------
+# -------------------- Tasks --------------------
 
+@task(name="process_video", retries=2, retry_delay_seconds=10)
 def process_video(video_path: str, frame_skip: int = 3) -> str:
+    logger = get_run_logger()
+    logger.info(f"Starting video processing for {video_path}")
+    
     output_csv = "detections.csv"
     with mlflow.start_run(nested=True):
         mlflow.log_param("processing_frame_skip", frame_skip)
@@ -138,7 +144,9 @@ def process_video(video_path: str, frame_skip: int = 3) -> str:
         cap = cv2.VideoCapture(video_path)
         
         if not cap.isOpened():
-            raise ValueError(f"Could not open video at {video_path}")
+            error_msg = f"Could not open video at {video_path}"
+            logger.error(error_msg)
+            raise ValueError(error_msg)
         
         fps = cap.get(cv2.CAP_PROP_FPS)
         last_positions = {}
@@ -184,11 +192,14 @@ def process_video(video_path: str, frame_skip: int = 3) -> str:
                     
         cap.release()
         mlflow.log_artifact(output_csv)
+        logger.info(f"Video processing completed. Results saved to {output_csv}")
         return output_csv
 
-# -------------------- Prepare Graph Data --------------------
-
+@task(name="prepare_graph_data")
 def prepare_graph_data(csv_path: str) -> Tuple[List[Data], List[float]]:
+    logger = get_run_logger()
+    logger.info(f"Preparing graph data from {csv_path}")
+    
     df = pd.read_csv(csv_path)
     graphs = []
     ball_speeds = []
@@ -222,9 +233,9 @@ def prepare_graph_data(csv_path: str) -> Tuple[List[Data], List[float]]:
                     if distance < 150:
                         edges.append([i, j])
                         if team_assignments[i] == team_assignments[j]:
-                            edge_attr.append(1.0)  # Stronger connection for teammates
+                            edge_attr.append(1.0)
                         else:
-                            edge_attr.append(0.3)  # Weaker connection for opponents
+                            edge_attr.append(0.3)
         
         if len(edges) == 0:
             continue
@@ -235,11 +246,14 @@ def prepare_graph_data(csv_path: str) -> Tuple[List[Data], List[float]]:
         data = Data(x=x, edge_index=edge_index, edge_attr=edge_weight)
         graphs.append(data)
         
+    logger.info(f"Created {len(graphs)} graph samples with {len(ball_speeds)} ball speed measurements")
     return graphs, ball_speeds
 
-# -------------------- Train Models --------------------
-
+@task(name="train_models")
 def train_models(graph_data: List[Data], epochs: int = 20):
+    logger = get_run_logger()
+    logger.info(f"Starting model training with {epochs} epochs")
+    
     movement_model = PlayerMovementGNN()
     refiner_model = TacticalRefiner()
     optimizer = torch.optim.Adam(
@@ -253,34 +267,28 @@ def train_models(graph_data: List[Data], epochs: int = 20):
         total_loss = 0
         for batch in loader:
             optimizer.zero_grad()
-            
-            # Movement prediction
             movement_out = movement_model(batch.x, batch.edge_index, batch.edge_attr)
-            
-            # Tactical refinement
             refinement_out = refiner_model(batch.x, batch.edge_index, batch.edge_attr)
-            
-            # Combined prediction
             combined_out = movement_out * 0.7 + refinement_out * 0.3
-            
-            # Dummy targets (in real case, use actual next positions)
             targets = torch.zeros_like(combined_out)
             loss = F.mse_loss(combined_out, targets)
-            
             loss.backward()
             optimizer.step()
             total_loss += loss.item()
         
         avg_loss = total_loss / len(loader)
         losses.append(avg_loss)
-        print(f"Epoch {epoch+1}/{epochs}, Loss: {avg_loss:.4f}")
+        logger.info(f"Epoch {epoch+1}/{epochs}, Loss: {avg_loss:.4f}")
         mlflow.log_metric("train_loss", avg_loss, step=epoch)
     
+    logger.info("Model training completed")
     return movement_model, refiner_model, losses
 
-# -------------------- Evaluate Detections --------------------
-
+@task(name="evaluate_detections")
 def evaluate_detections(csv_path: str):
+    logger = get_run_logger()
+    logger.info("Evaluating detection performance")
+    
     df = pd.read_csv(csv_path)
     y_true = df['class']
     y_pred = df['team'].apply(lambda t: 'player' if t in ['Team1', 'Team2'] else 'ball')
@@ -308,23 +316,21 @@ def evaluate_detections(csv_path: str):
         "accuracy": acc
     }
     
-    # Log metrics to MLflow
     mlflow.log_metrics(metrics)
-    
-    # Print metrics to terminal
-    print("\n📊 Detection Performance Metrics:")
-    print(f"Player - Precision: {player_precision:.2f}, Recall: {player_recall:.2f}, F1: {player_f1:.2f}")
-    print(f"Ball - Precision: {ball_precision:.2f}, Recall: {ball_recall:.2f}, F1: {ball_f1:.2f}")
-    print(f"Overall Accuracy: {acc:.2f}")
+    logger.info("\n📊 Detection Performance Metrics:")
+    logger.info(f"Player - Precision: {player_precision:.2f}, Recall: {player_recall:.2f}, F1: {player_f1:.2f}")
+    logger.info(f"Ball - Precision: {ball_precision:.2f}, Recall: {ball_recall:.2f}, F1: {ball_f1:.2f}")
+    logger.info(f"Overall Accuracy: {acc:.2f}")
     
     return metrics
 
-# -------------------- Visualize Results --------------------
-
+@task(name="visualize_results")
 def visualize_results(graph_data: List[Data], models: Tuple, ball_speeds: List[float]):
+    logger = get_run_logger()
+    logger.info("Visualizing results")
+    
     movement_model, refiner_model = models
     
-    # Ball speed plot
     plt.figure(figsize=(10, 5))
     plt.plot(ball_speeds)
     plt.title("Ball Speed Over Time")
@@ -333,30 +339,22 @@ def visualize_results(graph_data: List[Data], models: Tuple, ball_speeds: List[f
     mlflow.log_figure(plt.gcf(), "ball_speed_plot.png")
     plt.close()
     
-    # Sample some graphs for visualization
     sample_data = graph_data[:5]
     movement_model.eval()
     refiner_model.eval()
     
     with torch.no_grad():
         for i, data in enumerate(sample_data):
-            # Get predictions
             movement_pred = movement_model(data.x, data.edge_index, data.edge_attr)
             refinement_pred = refiner_model(data.x, data.edge_index, data.edge_attr)
-            
-            # Original positions
             orig_pos = data.x[:, :2].numpy()
             
-            # Create figure
             fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 6))
-            
-            # Plot movement predictions
             ax1.scatter(orig_pos[:, 0], orig_pos[:, 1], c='blue', label='Original')
             ax1.scatter(movement_pred[:, 0], movement_pred[:, 1], c='red', marker='x', label='Predicted')
             ax1.set_title(f"Movement Prediction - Sample {i+1}")
             ax1.legend()
             
-            # Plot tactical refinements
             ax2.scatter(orig_pos[:, 0], orig_pos[:, 1], c='blue', label='Original')
             ax2.scatter(refinement_pred[:, 0], refinement_pred[:, 1], c='green', marker='s', label='Refinement')
             ax2.set_title(f"Tactical Refinement - Sample {i+1}")
@@ -366,17 +364,14 @@ def visualize_results(graph_data: List[Data], models: Tuple, ball_speeds: List[f
             mlflow.log_figure(fig, f"predictions_sample_{i+1}.png")
             plt.close()
     
-    # Create tactical overview
     analyzer = TacticalAnalyzer()
     pitch = np.zeros((analyzer.pitch_size[1], analyzer.pitch_size[0], 3), dtype=np.uint8)
-    pitch[:] = (34, 139, 34)  # Green pitch
+    pitch[:] = (34, 139, 34)
     
-    # Draw pitch markings
     cv2.rectangle(pitch, (50, 50), (analyzer.pitch_size[0]-50, analyzer.pitch_size[1]-50), (255, 255, 255), 2)
     cv2.line(pitch, (analyzer.pitch_size[0]//2, 50), (analyzer.pitch_size[0]//2, analyzer.pitch_size[1]-50), (255, 255, 255), 2)
     cv2.circle(pitch, (analyzer.pitch_size[0]//2, analyzer.pitch_size[1]//2), 50, (255, 255, 255), 2)
     
-    # Plot player positions from last frame
     last_frame = graph_data[-1]
     positions = last_frame.x[:, :2].numpy()
     teams = ["Team1" if x[3] == 1 else "Team2" for x in last_frame.x.numpy()]
@@ -389,3 +384,5 @@ def visualize_results(graph_data: List[Data], models: Tuple, ball_speeds: List[f
     plt.title("Final Tactical Overview")
     mlflow.log_figure(plt.gcf(), "final_tactical_overview.png")
     plt.close()
+    
+    logger.info("Visualization completed")
