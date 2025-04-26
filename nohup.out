@@ -1,0 +1,232 @@
+[2025-04-26 11:59:13 +0100] [2980] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 11:59:13 +0100] [2980] [INFO] Listening at: http://0.0.0.0:5000 (2980)
+[2025-04-26 11:59:13 +0100] [2980] [INFO] Using worker: sync
+[2025-04-26 11:59:13 +0100] [2981] [INFO] Booting worker with pid: 2981
+[2025-04-26 11:59:13 +0100] [2982] [INFO] Booting worker with pid: 2982
+[2025-04-26 11:59:13 +0100] [2983] [INFO] Booting worker with pid: 2983
+[2025-04-26 11:59:14 +0100] [2984] [INFO] Booting worker with pid: 2984
+[2025-04-26 12:09:34 +0100] [3141] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 12:09:34 +0100] [3141] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:09:34 +0100] [3141] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:09:35 +0100] [3141] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:09:35 +0100] [3141] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:09:36 +0100] [3141] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:09:36 +0100] [3141] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:09:37 +0100] [3141] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:09:37 +0100] [3141] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:09:38 +0100] [3141] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:09:38 +0100] [3141] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:09:39 +0100] [3141] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 12:18:49 +0100] [3242] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 12:18:49 +0100] [3242] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:18:49 +0100] [3242] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:18:50 +0100] [3242] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:18:50 +0100] [3242] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:18:51 +0100] [3242] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:18:51 +0100] [3242] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:18:52 +0100] [3242] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:18:52 +0100] [3242] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:18:53 +0100] [3242] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:18:53 +0100] [3242] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:18:54 +0100] [3242] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 12:20:53 +0100] [3301] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 12:20:53 +0100] [3301] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:20:53 +0100] [3301] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:20:54 +0100] [3301] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:20:54 +0100] [3301] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:20:55 +0100] [3301] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:20:55 +0100] [3301] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:20:56 +0100] [3301] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:20:56 +0100] [3301] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:20:57 +0100] [3301] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:20:57 +0100] [3301] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:20:58 +0100] [3301] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 12:23:56 +0100] [3381] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 12:23:56 +0100] [3381] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:23:56 +0100] [3381] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:23:57 +0100] [3381] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:23:57 +0100] [3381] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:23:58 +0100] [3381] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:23:58 +0100] [3381] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:23:59 +0100] [3381] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:23:59 +0100] [3381] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:00 +0100] [3381] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:24:00 +0100] [3381] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:01 +0100] [3381] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 12:24:45 +0100] [3426] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 12:24:45 +0100] [3426] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:24:45 +0100] [3426] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:46 +0100] [3426] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:24:46 +0100] [3426] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:47 +0100] [3426] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:24:47 +0100] [3426] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:48 +0100] [3426] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:24:48 +0100] [3426] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:49 +0100] [3426] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 12:24:49 +0100] [3426] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 12:24:50 +0100] [3426] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 13:47:17 +0100] [3515] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 13:47:17 +0100] [3515] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:47:17 +0100] [3515] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:47:18 +0100] [3515] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:47:18 +0100] [3515] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:47:19 +0100] [3515] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:47:19 +0100] [3515] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:47:20 +0100] [3515] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:47:20 +0100] [3515] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:47:21 +0100] [3515] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:47:21 +0100] [3515] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:47:22 +0100] [3515] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 13:49:37 +0100] [3569] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 13:49:37 +0100] [3569] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:49:37 +0100] [3569] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:49:38 +0100] [3569] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:49:38 +0100] [3569] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:49:39 +0100] [3569] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:49:39 +0100] [3569] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:49:40 +0100] [3569] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:49:40 +0100] [3569] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:49:41 +0100] [3569] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 13:49:41 +0100] [3569] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 13:49:42 +0100] [3569] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 14:00:35 +0100] [3707] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 14:00:35 +0100] [3707] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:00:35 +0100] [3707] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:00:36 +0100] [3707] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:00:36 +0100] [3707] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:00:37 +0100] [3707] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:00:37 +0100] [3707] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:00:38 +0100] [3707] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:00:38 +0100] [3707] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:00:39 +0100] [3707] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:00:39 +0100] [3707] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:00:39 +0100] [3707] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 14:07:04 +0100] [3840] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 14:07:04 +0100] [3840] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:07:04 +0100] [3840] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:07:05 +0100] [3840] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:07:05 +0100] [3840] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:07:06 +0100] [3840] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:07:06 +0100] [3840] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:07:07 +0100] [3840] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:07:07 +0100] [3840] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:07:08 +0100] [3840] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:07:08 +0100] [3840] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:07:09 +0100] [3840] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 14:13:06 +0100] [2980] [CRITICAL] WORKER TIMEOUT (pid:2984)
+[2025-04-26 14:13:06 +0100] [2984] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-04-26 14:13:06 +0100] [2984] [INFO] Worker exiting (pid: 2984)
+[2025-04-26 14:13:07 +0100] [2980] [ERROR] Worker (pid:2984) was sent SIGKILL! Perhaps out of memory?
+[2025-04-26 14:13:07 +0100] [3954] [INFO] Booting worker with pid: 3954
+[2025-04-26 14:18:52 +0100] [4021] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 14:18:52 +0100] [4021] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:18:52 +0100] [4021] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:18:53 +0100] [4021] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:18:53 +0100] [4021] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:18:54 +0100] [4021] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:18:54 +0100] [4021] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:18:55 +0100] [4021] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:18:55 +0100] [4021] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:18:56 +0100] [4021] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:18:56 +0100] [4021] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:18:57 +0100] [4021] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 14:46:55 +0100] [4295] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 14:46:55 +0100] [4295] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:46:55 +0100] [4295] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:46:56 +0100] [4295] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:46:56 +0100] [4295] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:46:57 +0100] [4295] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:46:57 +0100] [4295] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:46:58 +0100] [4295] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:46:58 +0100] [4295] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:46:59 +0100] [4295] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:46:59 +0100] [4295] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:47:00 +0100] [4295] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 14:52:57 +0100] [2980] [CRITICAL] WORKER TIMEOUT (pid:2983)
+[2025-04-26 14:52:57 +0100] [2983] [ERROR] Error handling request (no URI read)
+Traceback (most recent call last):
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/workers/sync.py", line 133, in handle
+    req = next(parser)
+          ^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/parser.py", line 41, in __next__
+    self.mesg = self.mesg_class(self.cfg, self.unreader, self.source_addr, self.req_count)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 259, in __init__
+    super().__init__(cfg, unreader, peer_addr)
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 60, in __init__
+    unused = self.parse(self.unreader)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 271, in parse
+    self.get_data(unreader, buf, stop=True)
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/message.py", line 262, in get_data
+    data = unreader.read()
+           ^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 36, in read
+    d = self.chunk()
+        ^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/http/unreader.py", line 63, in chunk
+    return self.sock.recv(self.mxchunk)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/root/pi_project/venv/lib/python3.12/site-packages/gunicorn/workers/base.py", line 204, in handle_abort
+    sys.exit(1)
+SystemExit: 1
+[2025-04-26 14:52:57 +0100] [2983] [INFO] Worker exiting (pid: 2983)
+[2025-04-26 14:52:58 +0100] [2980] [ERROR] Worker (pid:2983) was sent SIGKILL! Perhaps out of memory?
+[2025-04-26 14:52:58 +0100] [4404] [INFO] Booting worker with pid: 4404
+[2025-04-26 14:58:59 +0100] [4480] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 14:58:59 +0100] [4480] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:58:59 +0100] [4480] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:59:00 +0100] [4480] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:59:00 +0100] [4480] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:59:01 +0100] [4480] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:59:01 +0100] [4480] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:59:02 +0100] [4480] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:59:02 +0100] [4480] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:59:03 +0100] [4480] [ERROR] Connection in use: ('0.0.0.0', 5000)
+[2025-04-26 14:59:03 +0100] [4480] [ERROR] connection to ('0.0.0.0', 5000) failed: [Errno 98] Address already in use
+[2025-04-26 14:59:04 +0100] [4480] [ERROR] Can't connect to ('0.0.0.0', 5000)
+Running the mlflow server failed. Please see the logs above for details.
+[2025-04-26 15:15:39 +0100] [672] [INFO] Starting gunicorn 23.0.0
+[2025-04-26 15:15:39 +0100] [672] [INFO] Listening at: http://0.0.0.0:5000 (672)
+[2025-04-26 15:15:39 +0100] [672] [INFO] Using worker: sync
+[2025-04-26 15:15:39 +0100] [673] [INFO] Booting worker with pid: 673
+[2025-04-26 15:15:39 +0100] [674] [INFO] Booting worker with pid: 674
+[2025-04-26 15:15:39 +0100] [675] [INFO] Booting worker with pid: 675
+[2025-04-26 15:15:39 +0100] [676] [INFO] Booting worker with pid: 676
